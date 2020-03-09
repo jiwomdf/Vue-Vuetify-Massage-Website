@@ -33,13 +33,24 @@
 
     </v-row>
     
+    <v-content>
+      <GridGalery/>
+      <GridInfo/>
+    </v-content>
+
   </v-container>
 </template>
 
 <script>
+import GridInfo from '../components/GridInfo';
+import GridGalery from '../components/GridGalery';
 
   export default {
     name: 'Welcome',
+    components: {
+      GridInfo,
+      GridGalery
+    },
 
     data: () => ({
     }),

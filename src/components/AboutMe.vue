@@ -1,0 +1,58 @@
+<template>
+   <v-container>
+     <center>
+
+      <h1 >About Me</h1>
+      
+      <v-layout column align-center>
+          <v-flex class="mt-5">
+              <v-avatar size="100">
+                  <v-img src="../assets/logo/avatar.png"></v-img>
+              </v-avatar>
+              <p class="ml-2 mt-2">Mas Aji</p>
+          </v-flex>
+      </v-layout>
+     </center>
+      
+      <v-layout column align-center>
+        <v-row>
+            <v-col v-for="(data, i) in datas" :key="i">
+              <v-card class="pa-2" outlined tile width="180px" height="100px">
+                <h4>{{data.title}}</h4>
+                <p>{{data.info}}</p>
+              </v-card>
+            </v-col>
+        </v-row>
+      </v-layout>
+      
+
+
+  </v-container>
+</template>
+
+<script>
+    export default {
+        name: 'AboutMe',
+        data: () => ({
+
+            datas: [
+                {
+                    title:'Nama',
+                    info:'Mas Aji',
+                },
+                {
+                    title:'Lokasi',
+                    info:'Jakarta Barat',
+                },
+                {
+                    title:'Nomor Telp',
+                    info:'+6281384176860',
+                },
+                {
+                    title:'WhatsApp',
+                    info:'+62895330124172',
+                }
+            ]
+        })
+    }
+</script>

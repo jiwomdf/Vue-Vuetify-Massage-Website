@@ -1,6 +1,6 @@
 <template>
    <v-container>
-    <h1 style="margin-left:18px">Galeri</h1>
+    <h1>Galeri</h1>
     <v-row no-gutters>
 
       <!-- <div v-for="(data, i) in datas" :key="i">
@@ -9,7 +9,7 @@
             <v-img :src="require(data.url)"></v-img>
         </v-col>
       </div> -->
-        <v-card class="pa-1" outlined tile width="260px" height="260px" style="margin-right:20px; margin-left:20px">
+        <v-card class="pa-1" outlined tile width="260px" height="260px" style="margin-right:20px;">
             <img src="../assets/imgs/1.jpg" alt="" width="250px" height="250px">
         </v-card>
         <v-card class="pa-1" outlined tile width="260px" height="260px" style="margin-right:20px">

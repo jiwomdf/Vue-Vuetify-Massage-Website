@@ -1,10 +1,10 @@
 <template>
    <v-container>
-    <h1 style="margin-left:18px">Layanan</h1>
-    <v-row no-gutters>
+    <h1>Layanan</h1>
+    <v-row>
 
       <div v-for="(data, i) in datas" :key="i">
-        <v-col :key="i">
+        <v-col>
           <v-card class="pa-2" outlined tile width="350px" height="450px">
             <h4>{{data.title}}</h4>
             <p>{{data.info}}</p>
@@ -41,6 +41,10 @@
                 {
                     title:'Kerik',
                     info:'Kerik / kerok adalah sebuah terapi pengobatan alternatif untuk gejala masuk angin dengan metode menggaruk sambil menekan bagian permukaan kulit menggunakan minyak dan benda tumpul seperti uang logam sebagai alat pengerok.',
+                },
+                {
+                  title:'Keseleo',
+                  info:''
                 }
             ]
         })
