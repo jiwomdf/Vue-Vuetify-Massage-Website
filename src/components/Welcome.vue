@@ -19,13 +19,16 @@
         <h2 class="headline font-weight-bold mb-3">
           Kontak kami pada: 
         </h2><br>
-        <v-btn>
-          <v-img src="../assets/logo/walogo.png" width="20px" height="20px"></v-img> <span style="padding-left:10px;">WhatsApp: 0895330124172</span>
-        </v-btn>
+        <a href="tel:+62895330124172" style="text-decoration:none"><v-btn>
+          <v-img src="../assets/logo/walogo.png" width="20px" height="20px"></v-img> 
+          <span style="padding-left:10px;">WhatsApp: +62895330124172</span>
+        </v-btn></a>
+
         <br><br>
-        <v-btn>
-          <v-icon>mdi-phone</v-icon> <span style="padding-left:10px;">Phone: 081384176860</span>
-        </v-btn>
+
+        <a href="tel:+6281384176860" style="text-decoration:none"><v-btn>
+          <v-icon>mdi-phone</v-icon> <span style="padding-left:10px;">Phone: +6281384176860</span>
+        </v-btn></a>
       </v-col>
 
     </v-row>

@@ -1,6 +1,6 @@
 <template>
    <v-container>
-    <h1 style="margin-left:20px">Layanan</h1>
+    <h1 style="margin-left:18px">Layanan</h1>
     <v-row no-gutters>
 
       <div v-for="(data, i) in datas" :key="i">

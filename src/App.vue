@@ -1,34 +1,25 @@
 <template>
   <v-app>
-      <div>
-        <v-app-bar color="blue lighten-5" flat>
-          <v-app-bar-nav-icon></v-app-bar-nav-icon>
 
-          <v-toolbar-title>Pijat Jakarta Barat</v-toolbar-title>
+    
 
-          <v-spacer></v-spacer>
+    <!-- Content -->
+    <v-content>
+      <NavBar/>
+      <Welcome/>
+      <GridGalery/>
+      <GridInfo/>
+    </v-content>
+    
+    </v-app>
 
-          <v-btn icon>
-            <v-icon>mdi-phone</v-icon>
-          </v-btn>
-          <v-menu left bottom>
-
-          </v-menu>
-        </v-app-bar>
-      </div>
-
-  <v-content>
-    <Welcome/>
-    <GridGalery/>
-    <GridInfo/>
-  </v-content>
-  </v-app>
 </template>
 
 <script>
 import Welcome from './components/Welcome';
 import GridInfo from './components/GridInfo';
 import GridGalery from './components/GridGalery';
+import NavBar from './components/NavBar';
 
 export default {
   name: 'App',
@@ -36,11 +27,8 @@ export default {
   components: {
     Welcome,
     GridInfo,
-    GridGalery
-  },
-
-  data: () => ({
-    //
-  }),
+    GridGalery,
+    NavBar
+  }
 };
 </script>
