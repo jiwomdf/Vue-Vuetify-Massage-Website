@@ -1,7 +1,7 @@
 <template>
    <v-container>
     <h1>Galeri</h1>
-    <v-row no-gutters>
+    <v-row>
 
       <!-- <div v-for="(data, i) in datas" :key="i">
         <v-col :key="i">
@@ -9,18 +9,40 @@
             <v-img :src="require(data.url)"></v-img>
         </v-col>
       </div> -->
-        <v-card class="pa-1" outlined tile width="260px" height="260px" style="margin-right:20px;">
-            <img src="../assets/imgs/1.jpg" alt="" width="250px" height="250px">
-        </v-card>
-        <v-card class="pa-1" outlined tile width="260px" height="260px" style="margin-right:20px">
-            <img src="../assets/imgs/2.jpg" alt="" width="250px" height="250px">
-        </v-card>
-        <v-card class="pa-1" outlined tile width="260px" height="260px" style="margin-right:20px">
-            <img src="../assets/imgs/3.jpg" alt="" width="250px" height="250px">
-        </v-card>
-        <v-card class="pa-1" outlined tile width="260px" height="260px" style="margin-right:20px">
-            <img src="../assets/imgs/4.jpg" alt="" width="250px" height="250px">
-        </v-card>
+      
+        <v-container class="fill-height" fluid style="min-height: 434px">
+            <v-fade-transition mode="out-in">
+                <v-row v-if="show" key="0">
+                    <v-col cols="6">
+                    <v-card>
+                        <v-img src="../assets/imgs/1.jpg" height="200" class="grey darken-4"></v-img>
+                        <v-card-title class="title">Refleksi</v-card-title>
+                    </v-card>
+                    </v-col>
+
+                    <v-col cols="6">
+                    <v-card>
+                        <v-img src="../assets/imgs/2.jpg" height="200" class="grey darken-4"></v-img>
+                        <v-card-title class="title">Body Massage</v-card-title>
+                    </v-card>
+                    </v-col>
+
+                    <v-col cols="6">
+                    <v-card>
+                        <v-img src="../assets/imgs/3.jpg" height="200" class="grey darken-4"></v-img>
+                        <v-card-title class="title">Body Scrub</v-card-title>
+                    </v-card>
+                    </v-col>
+
+                    <v-col cols="6">
+                    <v-card>
+                        <v-img src="../assets/imgs/4.jpg" height="200" class="grey darken-4"></v-img>
+                        <v-card-title class="title">Totok Wajah</v-card-title>
+                    </v-card>
+                    </v-col>
+                </v-row>
+            </v-fade-transition>
+        </v-container>
         
     </v-row>
   </v-container>
@@ -33,6 +55,7 @@
         name: 'GridGalery',
 
         data: () => ({
+            show: true,
             datas: [
                 {
                     url: staticPath + '1.jpg'

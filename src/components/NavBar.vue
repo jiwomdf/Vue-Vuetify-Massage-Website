@@ -62,7 +62,8 @@ export default {
     drawer:false,
     links :[
                 { icon: 'mdi-home', text: 'Home', route: '/'},
-                { icon: 'mdi-account', text: 'About Me', route: '/AboutMe'}
+                { icon: 'mdi-account', text: 'About Me', route: '/AboutMe'},
+                { icon: 'mdi-pencil', text: 'About Web Creator', route: '/WebCreator'}
             ],
 
   }),
