@@ -4,7 +4,7 @@
 
       <h1 >About Me</h1>
       
-      <v-layout column align-center>
+      <v-layout column>
           <v-flex class="mt-5">
               <v-avatar size="100">
                   <v-img src="../assets/logo/avatar.png"></v-img>
@@ -14,10 +14,10 @@
       </v-layout>
      </center>
       
-      <v-layout column align-center>
+      <v-layout column>
         <v-row>
             <v-col v-for="(data, i) in datas" :key="i">
-              <v-card class="pa-2" outlined tile width="180px" height="100px">
+              <v-card class="pa-2" outlined min-width="100px" height="100px">
                 <h4>{{data.title}}</h4>
                 <p>{{data.info}}</p>
               </v-card>

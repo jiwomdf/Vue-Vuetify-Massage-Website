@@ -5,9 +5,10 @@
       </v-col>
 
       <v-col class="mb-4">
-        <h1 class="display-2 font-weight-bold mb-3">
-          Pijat Panggilan Jakarta (JAVA MASSAGE)
+        <h1 class="display-2 font-weight-bold ">
+          Pijat Panggilan Jakarta
         </h1>
+        <h1>(JAVA MASSAGE)</h1><br>
 
         <p class="subheading font-weight-regular">
           Terapis Pijat Jakarta Barat <br>

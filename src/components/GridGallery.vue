@@ -4,7 +4,7 @@
     <v-row>
 
         <!-- Image -->
-        <v-container class="fill-height" fluid style="min-height: 434px">
+        <v-container class="fill-height" fluid max-height="434px" max-width="200px" min-height="100px" min-width="100px">
             <v-fade-transition mode="out-in">
                 <v-row v-if="show" key="0">
                     
@@ -20,16 +20,29 @@
         </v-container>
 
         <!-- Bottom Sheet -->
-        <v-bottom-sheet v-model="sheet" inset>
-            <v-sheet class="text-center" height="600px">
+        <v-dialog v-model="sheet" max-width="900" min-width="500" >
+            <v-sheet class="text-center" max-height="600px" min-height="200px">
                 <center>
                     <div v-if="selData.imgName != ''">
-                        <v-img :src="getImgUrl(selData.imgName)" height="400" ></v-img>
-                        <h2 class="mt-6">{{selData.imgTitle}}</h2>
+                        
+                        <v-img :src="getImgUrl(selData.imgName)" height="250" >
+                            <b><p class="mt-3 mb-2" style="color:white; font-size:100px">{{selData.imgTitle}}</p></b>
+                        </v-img>
+
+                        <v-divider></v-divider>
+                        
+                        <v-row style="margin:0px;padding:0px;">
+                            <div v-for="(subData, i) in subDatas" :key="i" style="margin:0px;padding:0px;">
+                                <v-col style="margin:0px;padding:0px;">
+                                    <v-img :src="getSubImgUrl(subData.imgName)" height="150" width="180"></v-img>
+                                </v-col>
+                            </div>
+                        </v-row>                        
+
                     </div>
                 </center>
             </v-sheet>
-        </v-bottom-sheet>
+        </v-dialog>
         
     </v-row>
   </v-container>
@@ -57,17 +70,54 @@
                 },
                 {
                     imgName: '3.jpg',
-                    imgTitle: 'Totok Wajah'
+                    imgTitle: 'Body Scrub'
                 },
                 {
                     imgName: '4.jpg',
-                    imgTitle:'Body Scrub'
+                    imgTitle:'Totok Wajah'
+                }
+            ],
+            subDatas:[
+                {
+                    imgName: 'bodymassage/2.png',
+                    imgTitle: 'test 1'
+                },
+                {
+                    imgName: 'bodymassage/5.png',
+                    imgTitle: 'test 2'
+                },
+                {
+                    imgName: 'bodymassage/3.png',
+                    imgTitle: 'test 3'
+                },
+                {
+                    imgName: 'bodymassage/4.png',
+                    imgTitle: 'test 4'
+                },
+                {
+                    imgName: 'bodymassage/5.png',
+                    imgTitle: 'test 5'
+                },
+                {
+                    imgName: 'bodymassage/6.png',
+                    imgTitle: 'test 6'
+                },
+                 {
+                    imgName: 'bodymassage/3.png',
+                    imgTitle: 'test 5'
+                },
+                {
+                    imgName: 'bodymassage/1.png',
+                    imgTitle: 'test 6'
                 }
             ]
         }),
         methods:{
             getImgUrl(imgName) {
                 return require('../assets/imgs/' + imgName)
+            },
+            getSubImgUrl(imgName) {
+                return require('../assets/subimgs/' + imgName)
             },
             openBtnSheet(imgName){
                 this.sheet = true

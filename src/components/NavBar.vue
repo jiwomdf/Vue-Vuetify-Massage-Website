@@ -34,7 +34,7 @@
                 <v-avatar size="100">
                     <v-img src="../assets/logo/avatar.png"></v-img>
                 </v-avatar>
-                <p class="ml-5 mt-2">Mas Aji</p>
+                <p class="ml-1 mt-2">Pijat Mas Aji</p>
             </v-flex>
         </v-layout>
 

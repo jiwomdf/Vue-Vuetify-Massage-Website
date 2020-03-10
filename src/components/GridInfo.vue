@@ -5,11 +5,21 @@
 
       <div v-for="(data, i) in datas" :key="i">
         <v-col>
-          <v-card class="pa-2" outlined tile width="350px" height="450px">
+          <v-card class="pa-2" outlined v-on:click="openMore(data)" max-width="500" >
             <h4>{{data.title}}</h4>
-            <p>{{data.info}}</p>
+            <p>{{subInfo(data.info)}} <b style="float:right" class="mr-4 ml-4">Read more..</b></p>
           </v-card>
         </v-col>
+      </div>
+
+      <!-- Bottom Sheet -->
+      <div v-if="bsInfo != ''">
+        <v-bottom-sheet v-model="sheet" class="m-10" inset >
+            <v-sheet min-height="400px">
+                <h1 class="text-center">{{bsInfo.title}}</h1>
+                <p justify-start class="mt-4 ml-4 mr-4">{{bsInfo.info}}</p>
+            </v-sheet>
+        </v-bottom-sheet>
       </div>
 
     </v-row>
@@ -19,8 +29,9 @@
 <script>
     export default {
         name: 'GridInfo',
-
         data: () => ({
+            sheet: false,
+            bsInfo:'',
             datas: [
                 {
                     title:'Refleksi',
@@ -41,12 +52,18 @@
                 {
                     title:'Kerik',
                     info:'Kerik / kerok adalah sebuah terapi pengobatan alternatif untuk gejala masuk angin dengan metode menggaruk sambil menekan bagian permukaan kulit menggunakan minyak dan benda tumpul seperti uang logam sebagai alat pengerok.',
-                },
-                {
-                  title:'Keseleo',
-                  info:''
                 }
             ]
-        })
+        }),
+        methods:{
+          openMore(data){
+              this.sheet = true
+              this.bsInfo = data
+          },
+          subInfo(info){
+            console.log(info)
+            return info.substring(0,100)
+          }
+        }
     }
 </script>
