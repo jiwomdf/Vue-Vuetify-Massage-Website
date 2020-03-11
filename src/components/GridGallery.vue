@@ -20,13 +20,13 @@
         </v-container>
 
         <!-- Bottom Sheet -->
-        <v-dialog v-model="sheet" max-width="900" min-width="500" >
-            <v-sheet class="text-center" max-height="600px" min-height="200px">
+        <v-dialog v-model="sheet" max-width="930" min-width="500" >
+            <v-sheet class="text-center" min-height="200px">
                 <center>
                     <div v-if="selData.imgName != ''">
                         
                         <v-img :src="getImgUrl(selData.imgName)" height="250" >
-                            <b><p class="mt-3 mb-2" style="color:white; font-size:100px">{{selData.imgTitle}}</p></b>
+                            <b><p class="mt-3 mb-2" id="p_popup" style="color:white">{{selData.imgTitle}}</p></b>
                         </v-img>
 
                         <v-divider></v-divider>
@@ -34,7 +34,7 @@
                         <v-row style="margin:0px;padding:0px;">
                             <div v-for="(subData, i) in subDatas" :key="i" style="margin:0px;padding:0px;">
                                 <v-col style="margin:0px;padding:0px;">
-                                    <v-img :src="getSubImgUrl(subData.imgName)" height="150" width="180"></v-img>
+                                    <v-img :src="getSubImgUrl(subData.imgName)" id="img_popup" height="150"></v-img>
                                 </v-col>
                             </div>
                         </v-row>                        
@@ -47,6 +47,37 @@
     </v-row>
   </v-container>
 </template>
+
+<style>
+    @media screen{
+        #p_popup{
+            font-size: 40px;
+        }
+        #img_popup{
+            width: 90px;
+        }
+    }
+    @media screen and (min-width:400px) {
+        #img_popup{
+            width: 121px;
+        }
+    }
+    @media screen and (min-width:500px) {
+        #p_popup{
+            font-size:100px
+        }
+        #img_popup{
+            width: 155px;
+        }
+    }
+
+    /* exception */
+    @media screen and (min-width:500px) and (min-height:700px){
+        #p_popup{
+            font-size:80px
+        }
+    }
+</style>
 
 <script>
 
