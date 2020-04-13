@@ -12,10 +12,10 @@
 
         <h3>JAVA MASSAGE REFLEXOLOGY & TRADITIONAL MASSAGE</h3><br>
         <p class="subheading font-weight-regular">
-        Khusus Panggilan Rumah, Kost, Hotel & Apartemen.<br>
+        Khusus Panggilan <b>Rumah</b>, <b>Kost</b>, <b>Hotel & Apartemen.</b><br>
         Dengan Tenaga Berpengalaman & Professional. 
         <br><br>
-          Buka hari ini sampai pukul 22.00
+          Buka hari ini sampai <b>pukul 22.00</b>
         </p>
       </v-col>
 
