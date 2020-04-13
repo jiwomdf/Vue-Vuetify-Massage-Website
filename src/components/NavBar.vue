@@ -32,7 +32,7 @@
         <v-layout column align-center>
             <v-flex class="mt-5">
                 <v-avatar size="100">
-                    <v-img src="../assets/logo/avatar.png"></v-img>
+                    <v-img src="../assets/logo/clipart.jpg"></v-img>
                 </v-avatar>
                 <p class="ml-1 mt-2">Pijat Mas Aji</p>
             </v-flex>

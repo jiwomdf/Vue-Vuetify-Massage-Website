@@ -110,10 +110,6 @@
             ],
             subDatas:[
                 {
-                    imgName: 'bodymassage/2.png',
-                    imgTitle: 'test 1'
-                },
-                {
                     imgName: 'bodymassage/5.png',
                     imgTitle: 'test 2'
                 },
@@ -136,10 +132,6 @@
                  {
                     imgName: 'bodymassage/3.png',
                     imgTitle: 'test 5'
-                },
-                {
-                    imgName: 'bodymassage/1.png',
-                    imgTitle: 'test 6'
                 }
             ]
         }),

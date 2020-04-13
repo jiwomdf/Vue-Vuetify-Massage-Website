@@ -10,8 +10,11 @@
         </h1>
         <h1>(JAVA MASSAGE)</h1><br>
 
+        <h3>JAVA MASSAGE REFLEXOLOGY & TRADITIONAL MASSAGE</h3><br>
         <p class="subheading font-weight-regular">
-          Terapis Pijat Jakarta Barat <br>
+        Khusus Panggilan Rumah, Kost, Hotel & Apartemen.<br>
+        Dengan Tenaga Berpengalaman & Professional. 
+        <br><br>
           Buka hari ini sampai pukul 22.00
         </p>
       </v-col>

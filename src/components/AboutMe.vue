@@ -7,7 +7,7 @@
       <v-layout column>
           <v-flex class="mt-5">
               <v-avatar size="100">
-                  <v-img src="../assets/logo/avatar.png"></v-img>
+                  <v-img src="../assets/logo/clipart.jpg"></v-img>
               </v-avatar>
               <p class="ml-2 mt-2">Mas Aji</p>
           </v-flex>
