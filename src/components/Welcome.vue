@@ -37,6 +37,8 @@
     <v-content>
       <GridGallery/>
       <GridInfo/>
+      <HourInfo/>
+      <Footer/>
     </v-content>
 
   </v-container>
@@ -45,12 +47,16 @@
 <script>
 import GridInfo from '../components/GridInfo';
 import GridGallery from '../components/GridGallery';
+import HourInfo from '../components/HourInfo';
+import Footer from '../components/Footer';
 
   export default {
     name: 'Welcome',
     components: {
       GridInfo,
-      GridGallery
+      GridGallery,
+      HourInfo,
+      Footer
     },
 
     data: () => ({
