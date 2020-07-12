@@ -41,7 +41,7 @@ export default {
       },
       {
         title: "Nomor Telp",
-        info: "+6281384176860"
+        info: "+62895330124172"
       },
       {
         title: "WhatsApp",
